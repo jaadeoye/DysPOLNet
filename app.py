@@ -5,6 +5,8 @@ import matplotlib as mpl
 import pandas as pd
 from sklearn.linear_model import LogisticRegression as LR
 import pickle
+import streamlit as st
+import os
 
 preprocess_input = tf.keras.applications.efficientnet.preprocess_input
 
@@ -12,9 +14,7 @@ preprocess_input = tf.keras.applications.efficientnet.preprocess_input
 def model():
          model = tf.keras.models.load_model('DysPOLNet.hdf5')
          return model
-
-import streamlit as st
-import os
+         
 st.write("""
          # Predict Probability of Dysplasia in Oral Leukoplakia
          """
