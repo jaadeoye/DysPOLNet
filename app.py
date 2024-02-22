@@ -11,7 +11,7 @@ import os
 preprocess_input = tf.keras.applications.efficientnet.preprocess_input
 
 @st.cache_resource
-def model():
+def model(img_array):
          model = tf.keras.models.load_model('DysPOLNet.hdf5')
          return model.predict
          
