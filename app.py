@@ -8,6 +8,7 @@ import pickle
 
 preprocess_input = tf.keras.applications.efficientnet.preprocess_input
 
+@st.cache_resource
 model = tf.keras.models.load_model('DysPOLNet.hdf5')
 
 import streamlit as st
@@ -84,7 +85,7 @@ else:
     st.image(image, use_column_width=True)
     st.caption('_Image Uploaded by_ USER')
     img_array = preprocess_input(get_img_array(path, size=img_size))
-    prediction0 = model(img_array)
+    prediction0 = model.predict(img_array)
     prediction1 = np.array(prediction0)
     prediction2 = pd.DataFrame(prediction1)
     platt = pickle.load(open('lr', 'rb'))
