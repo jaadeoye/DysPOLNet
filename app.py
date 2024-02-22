@@ -9,7 +9,9 @@ import pickle
 preprocess_input = tf.keras.applications.efficientnet.preprocess_input
 
 @st.cache_resource
-model = tf.keras.models.load_model('DysPOLNet.hdf5')
+def model():
+         model = tf.keras.models.load_model('DysPOLNet.hdf5')
+         return model
 
 import streamlit as st
 import os
