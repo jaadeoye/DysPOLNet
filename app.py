@@ -1,4 +1,4 @@
-simport tensorflow as tf
+import tensorflow as tf
 import keras
 import tempfile
 import matplotlib as mpl
