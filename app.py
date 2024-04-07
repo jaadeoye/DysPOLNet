@@ -13,10 +13,12 @@ preprocess_input = tf.keras.applications.efficientnet.preprocess_input
 @st.cache(allow_output_mutation=True)
 def load_model():
     model = tf.keras.load_model('DysPOLNet.hdf5')  # replace with your model loading code
+    model._make_predict_function()
+    model.summary()
     return model
 
 model = load_model()
-         
+
 st.write("""
          # Predict Probability of Dysplasia in Oral Leukoplakia
          """
