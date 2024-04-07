@@ -17,7 +17,7 @@ st.write("""
          """
          )
 st.write('Simple deployment of the ***:blue[DysPOLNet]*** model to predict dysplasia using lesion photographs')
-file = st.file_uploader("Please upload a close-up image file of the lesion without cheek retractors or mouth mirrors if possible", type=["jpg", "png"])
+file = st.file_uploader("Please upload a close-up image file of the lesion without cheek retractors, teeth, or mouth mirrors if possible", type=["jpg", "png"])
 if file:
         temp_dir = tempfile.mkdtemp()
         path = os.path.join(temp_dir, file.name)
