@@ -10,7 +10,7 @@ import os
 
 preprocess_input = tf.keras.applications.efficientnet.preprocess_input
 
-@st.cache_resource(allow_output_mutation=True)
+@st.cache_resource
 def load_model():
     model = tf.keras.models.load_model('DysPOLNet.hdf5')  # replace with your model loading code
     model.summary()
