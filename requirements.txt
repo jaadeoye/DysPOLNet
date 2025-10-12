@@ -1,18 +1,10 @@
-pip
-markdown-it-py==4.0.0
-pygments==2.19.2
-mdurl==0.1.2
-rich==14.2.0
-keras==2.15.0
-matplotlib==3.7.2
+keras
+matplotlib
 pandas
-scikit_learn==1.0.2
+scikit_learn
 streamlit
 tensorflow-cpu
-Pillow==10.0.0
+Pillow
 numpy
-
-
-
 
 
