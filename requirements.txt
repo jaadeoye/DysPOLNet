@@ -3,9 +3,10 @@ matplotlib
 pandas
 scikit_learn
 streamlit
-tensorflow-cpu
+tensorflow-cpu==2.11.0
 Pillow
 numpy
+
 
 
 
