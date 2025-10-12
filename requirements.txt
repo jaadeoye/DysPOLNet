@@ -1,4 +1,4 @@
-keras
+keras==2.15.0
 matplotlib
 pandas
 scikit_learn
@@ -6,5 +6,6 @@ streamlit
 tensorflow-cpu
 Pillow
 numpy
+
 
 
