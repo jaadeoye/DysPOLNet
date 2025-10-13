@@ -86,7 +86,7 @@ if file is None:
     st.text("请上传jpg或png格式的图像文件")
 else:
     image = Image.open(file)
-    st.image(image, use_column_width=True)
+    st.image(image, use_container_width=True)
     st.caption('用户上传的图像')
     img_array = preprocess_input(get_img_array(path, size=img_size))
     prediction0 = model.predict(img_array)
@@ -112,7 +112,7 @@ else:
     st.write('可解释性热图：')
     heatmap = make_gradcam_heatmap(img_array, model, last_conv_layer_name)
     image2=display_gradcam(path, heatmap)
-    st.image(image2, use_column_width=True)
+    st.image(image2, use_container_width=True)
     st.caption('GradCAM热图显示了影响 :blue[DysPOLNet’s] 预测的区域')
     st.markdown('####')
     st.markdown('####')
@@ -121,3 +121,4 @@ else:
     st.markdown('####')
     st.write("团队网站： [香港大学口腔癌研究团队 ](https://facdent.hku.hk/research/oral-cancer.html)  |  2024")
     
+
