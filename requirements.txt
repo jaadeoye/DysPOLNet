@@ -1,9 +1,9 @@
-keras>=2.15.0
+keras==2.15.0
 matplotlib
 pandas
 scikit_learn
 streamlit
-tensorflow-cpu
+tensorflow-cpu==2.15.0
 Pillow
 numpy
 
